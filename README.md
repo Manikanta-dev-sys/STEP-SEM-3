@@ -25,7 +25,13 @@ STEP-SEM-3/
 │       └── RockPaperScissors.java
 ├── Week-2/
 │   ├── Assignment-Problems/
+│   │   └── .gitkeep
 │   └── Practice-Problems/
+│       ├── BankTransactionReferenceValidator.java
+│       ├── CSVStudentRecordParser.java
+│       ├── FileExtensionValidator.java
+│       ├── MaskedPhoneNumberFormatter.java
+│       └── VowelAndConsonantCounter.java
 ├── Week-3/
 │   ├── Assignment-Problems/
 │   └── Practice-Problems/
@@ -92,9 +98,30 @@ STEP-SEM-3/
 
 ---
 
+## Week 2: Programs Overview
+
+### Practice Problems (`Week-2/Practice-Problems/`)
+1. **`VowelAndConsonantCounter.java`**
+   - **Scenario:** *Library Orientation Kiosk* – Loops through text using `charAt()`, counts vowels (case-insensitive) and consonants separately, and ignores spaces.
+   - **Key Method:** `countVowelsAndConsonants(String text)`
+2. **`CSVStudentRecordParser.java`**
+   - **Scenario:** *T&P Team Student Registration* – Splits CSV strings (`"Name,RollNumber,Department"`), validates exactly 3 non-empty fields, and formats output records.
+   - **Key Method:** `parseStudentRecord(String csvLine)`
+3. **`FileExtensionValidator.java`**
+   - **Scenario:** *Assignment-Upload Portal* – Extracts extensions using `lastIndexOf('.')` and `substring()`, validating against accepted formats (`pdf`, `docx`, `zip`) case-insensitively.
+   - **Key Method:** `validateFileExtension(String filename)`
+4. **`MaskedPhoneNumberFormatter.java`**
+   - **Scenario:** *Student-Support Call Center* – Validates 10-digit phone numbers and formats a masked string (`"XXXXXX-XXXX"`) using `StringBuilder` and `insert()`.
+   - **Key Method:** `maskPhoneNumber(String phone)`
+5. **`BankTransactionReferenceValidator.java`**
+   - **Scenario:** *Fintech Onboarding Module* – Normalizes codes (trim + first 3 letters uppercased), validates 14 characters (3 letters + 11 digits via `Character.isLetter()`/`isDigit()`, no regex), and constructs formatted display line `"[BANKCODE] DATE: dd/MM/yy | SEQ: 12345"` using `StringBuilder`.
+   - **Key Methods:** `normalizeReference(String raw)`, `validateAndFormat(String reference)`
+
+---
+
 ## How to Compile & Run
 
-### Practice Problems:
+### Week 1 Practice Problems:
 ```bash
 cd Week-1/Practice-Problems
 javac *.java
@@ -106,7 +133,7 @@ java FirstNonRepeatingCharacter
 java ReverseCustomerName
 ```
 
-### Assignment Problems:
+### Week 1 Assignment Problems:
 ```bash
 cd Week-1/Assignment-Problems
 javac *.java
@@ -116,6 +143,18 @@ java TypingSpeedTestAccuracyChecker
 java TrafficSignalStreakAnalyzer
 java WarehouseInventoryBalancer
 java MovieReviewWordLengthProfiler
+```
+
+### Week 2 Practice Problems:
+```bash
+cd Week-2/Practice-Problems
+javac *.java
+
+java VowelAndConsonantCounter
+java CSVStudentRecordParser
+java FileExtensionValidator
+java MaskedPhoneNumberFormatter
+java BankTransactionReferenceValidator
 ```
 
 ---
@@ -142,7 +181,7 @@ When you are ready to publish:
 2. **Run in terminal inside `C:\Users\manikanta\Documents\STEP-SEM-3`**:
    ```bash
    git add .
-   git commit -m "Add Week 1 assignment solutions and update documentation"
+   git commit -m "Add Week 2 practice problems and update documentation"
    git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/STEP-SEM-3.git
    git push -u origin main
    ```
