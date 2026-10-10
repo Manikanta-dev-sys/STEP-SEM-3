@@ -41,7 +41,13 @@ STEP-SEM-3/
 │   └── Practice-Problems/
 ├── Week-4/
 │   ├── Assignment-Problems/
+│   │   └── .gitkeep
 │   └── Practice-Problems/
+│       ├── BestTimeToBuyAndSellStock.java
+│       ├── ContainsDuplicate.java
+│       ├── MergeTwoSortedArrays.java
+│       ├── RotateArray.java
+│       └── TwoSum.java
 ├── Week-5/
 │   ├── Assignment-Problems/
 │   └── Practice-Problems/
@@ -67,137 +73,72 @@ STEP-SEM-3/
 ## Week 1: Programs Overview
 
 ### A. Practice Problems (`Week-1/Practice-Problems/`)
-1. **`RockPaperScissors.java`**
-   - **Scenario:** *The College Coding Arcade* – Simulates a 5-round match against computer with history, formatted scoreboard, and win percentage calculation.
-   - **Key Method:** `playRound(String playerMove, String computerMove)`
-2. **`PalindromeChecker.java`**
-   - **Scenario:** *The QA Text Verification Toolkit* – Verifies palindromes via 3 independent methods (iterative two-pointer, recursion, and array reversal).
-   - **Key Methods:** `isPalindromeIterative`, `isPalindromeRecursive`, `isPalindromeArrayReversal`
-3. **`BMICalculator.java`**
-   - **Scenario:** *The Corporate Wellness Program* – Computes BMI for a 10-person team and classifies health status into Underweight, Normal, Overweight, Obese.
-   - **Key Methods:** `getBmiStatus(double bmi)`, `printWellnessReport(double[] heights, double[] weights)`
-4. **`FirstNonRepeatingCharacter.java`**
-   - **Scenario:** *The Unique Letter Hunt Mini-Game* – Counts character frequency and scans left-to-right for the first unique character.
-   - **Key Method:** `findFirstNonRepeatingChar(String text)`
-5. **`ReverseCustomerName.java`**
-   - **Scenario:** *The Customer Identity Verification System* – Reverses a customer name string via character traversal while preserving original immutability.
-   - **Key Method:** `reverseCustomerName(String customerName)`
+1. **`RockPaperScissors.java`** – Simulates a 5-round match against computer with formatted scoreboard and win percentage.
+2. **`PalindromeChecker.java`** – Verifies palindromes using Iterative, Recursive, and Array Reversal methods.
+3. **`BMICalculator.java`** – Computes BMI for a 10-person team and classifies status (*Underweight*, *Normal*, *Overweight*, *Obese*).
+4. **`FirstNonRepeatingCharacter.java`** – Computes character frequency and scans left-to-right for the first unique character.
+5. **`ReverseCustomerName.java`** – Reverses a customer name string via character traversal while preserving original immutability.
 
 ### B. Assignment Problems (`Week-1/Assignment-Problems/`)
-1. **`ExamHallSeatDuplicationChecker.java`**
-   - **Scenario:** *The Examination Cell* – Detects duplicate seat allocations across an exam hall using primitive arrays and nested loops only (no Collections classes).
-   - **Key Method:** `checkDuplicateSeats(int[] seatNumbers)`
-2. **`TypingSpeedTestAccuracyChecker.java`**
-   - **Scenario:** *Online Typing Practice Website* – Calculates character-by-character accuracy percentage and pinpoints the 1-based position and characters of the first mismatch.
-   - **Key Method:** `checkTypingAccuracy(String original, String typed)`
-3. **`TrafficSignalStreakAnalyzer.java`**
-   - **Scenario:** *City Traffic Control Department* – Scans minute-by-minute traffic light readings (`'R'`, `'Y'`, `'G'`) and detects the longest continuous streak of the same color.
-   - **Key Method:** `findLongestStreak(String signalLog)`
-4. **`WarehouseInventoryBalancer.java`**
-   - **Scenario:** *Retail Warehouse Stock Auditing* – Evaluates section quantities for balance between Section A and Section B and reports the overall highest-quantity item with section and index.
-   - **Key Method:** `analyzeInventory(int[] sectionA, int[] sectionB)`
-5. **`MovieReviewWordLengthProfiler.java`**
-   - **Scenario:** *Movie Review Platform Moderation* – Splits reviews into words and classifies counts into Short (1–4), Medium (5–8), and Long (9+) words.
-   - **Key Method:** `classifyWordLengths(String review)`
+1. **`ExamHallSeatDuplicationChecker.java`** – Detects duplicate seat allocations across an exam hall using primitive arrays and nested loops only.
+2. **`TypingSpeedTestAccuracyChecker.java`** – Calculates character-by-character accuracy percentage and pinpoints first mismatch.
+3. **`TrafficSignalStreakAnalyzer.java`** – Scans minute-by-minute traffic readings (`'R'`, `'Y'`, `'G'`) and detects the longest continuous streak.
+4. **`WarehouseInventoryBalancer.java`** – Balances section quantities and reports the overall highest-quantity item.
+5. **`MovieReviewWordLengthProfiler.java`** – Splits reviews into words and classifies counts into Short (1–4), Medium (5–8), and Long (9+) words.
 
 ---
 
 ## Week 2: Programs Overview
 
 ### A. Practice Problems (`Week-2/Practice-Problems/`)
-1. **`VowelAndConsonantCounter.java`**
-   - **Scenario:** *Library Orientation Kiosk* – Loops through text using `charAt()`, counts vowels (case-insensitive) and consonants separately, and ignores spaces.
-   - **Key Method:** `countVowelsAndConsonants(String text)`
-2. **`CSVStudentRecordParser.java`**
-   - **Scenario:** *T&P Team Student Registration* – Splits CSV strings (`"Name,RollNumber,Department"`), validates exactly 3 non-empty fields, and formats output records.
-   - **Key Method:** `parseStudentRecord(String csvLine)`
-3. **`FileExtensionValidator.java`**
-   - **Scenario:** *Assignment-Upload Portal* – Extracts extensions using `lastIndexOf('.')` and `substring()`, validating against accepted formats (`pdf`, `docx`, `zip`) case-insensitively.
-   - **Key Method:** `validateFileExtension(String filename)`
-4. **`MaskedPhoneNumberFormatter.java`**
-   - **Scenario:** *Student-Support Call Center* – Validates 10-digit phone numbers and formats a masked string (`"XXXXXX-XXXX"`) using `StringBuilder` and `insert()`.
-   - **Key Method:** `maskPhoneNumber(String phone)`
-5. **`BankTransactionReferenceValidator.java`**
-   - **Scenario:** *Fintech Onboarding Module* – Normalizes codes (trim + first 3 letters uppercased), validates 14 characters (3 letters + 11 digits via `Character.isLetter()`/`isDigit()`, no regex), and constructs formatted display line `"[BANKCODE] DATE: dd/MM/yy | SEQ: 12345"` using `StringBuilder`.
-   - **Key Methods:** `normalizeReference(String raw)`, `validateAndFormat(String reference)`
+1. **`VowelAndConsonantCounter.java`** – Loops through text using `charAt()`, counts vowels (case-insensitive) and consonants, and ignores spaces.
+2. **`CSVStudentRecordParser.java`** – Splits CSV strings (`"Name,RollNumber,Department"`), validates 3 fields, and formats output records.
+3. **`FileExtensionValidator.java`** – Extracts extensions using `lastIndexOf('.')` and `substring()`, validating against accepted formats (`pdf`, `docx`, `zip`).
+4. **`MaskedPhoneNumberFormatter.java`** – Validates 10-digit phone numbers and formats a masked string (`"XXXXXX-XXXX"`) using `StringBuilder` and `insert()`.
+5. **`BankTransactionReferenceValidator.java`** – Normalizes and validates 14-character reference codes without regex and formats with `StringBuilder`.
 
 ### B. Assignment Problems (`Week-2/Assignment-Problems/`)
-1. **`AtmPinLengthValidator.java`**
-   - **Scenario:** *ATM Customer Input Pre-check* – Validates that an entered PIN string is exactly 4 characters using `length()` and a single `if/else` check (no loops).
-   - **Key Method:** `checkPinLength(String pin)`
-2. **`WordReversalEncoder.java`**
-   - **Scenario:** *Coding Club "Mirror Text" Mini-Game* – Splits sentences by space, reverses each word individually using a loop and `StringBuilder`, and joins back preserving word order.
-   - **Key Method:** `reverseEachWord(String sentence)`
-3. **`ProductInventoryCsvParser.java`**
-   - **Scenario:** *Warehouse Inventory Updates Parser* – Splits CSV lines into fields (`"ProductName,SKU,Quantity"`), validates 3 fields, and prints formatted records.
-   - **Key Method:** `parseInventoryRecord(String csvLine)`
-4. **`LibraryIsbnValidator.java`**
-   - **Scenario:** *Library Book-Intake Scanner* – Normalizes codes (trim + first 3 letters uppercased), validates 13 characters (3 letters + 10 digits via loop - no regex), and builds display line `"[PUBCODE] YEAR: 20XX | CATALOG: 123456"` with `StringBuilder`.
-   - **Key Methods:** `normalizeCode(String raw)`, `validateAndFormat(String code)`
-5. **`StopWordFilteredWordFrequencyReport.java`**
-   - **Scenario:** *T&P Team Feedback Analysis* – Lowercases text, strips punctuation with `replace()`, splits by whitespace, filters stop words (`"the"`, `"was"`, `"and"`, `"a"`, `"is"`, `"of"`, `"in"`), counts frequencies with a `HashMap`, and prints results sorted descending by count.
-   - **Key Method:** `printFilteredWordFrequency(String feedback)`
+1. **`AtmPinLengthValidator.java`** – Validates that an entered PIN string is exactly 4 characters using `length()` and a single `if/else` check.
+2. **`WordReversalEncoder.java`** – Splits sentences by space, reverses each word individually using a loop and `StringBuilder`, and joins back.
+3. **`ProductInventoryCsvParser.java`** – Splits CSV lines into fields (`"ProductName,SKU,Quantity"`), validates 3 fields, and prints formatted records.
+4. **`LibraryIsbnValidator.java`** – Normalizes codes, validates 13 characters (3 letters + 10 digits via loop), and builds display line with `StringBuilder`.
+5. **`StopWordFilteredWordFrequencyReport.java`** – Filters stop words, counts frequencies with a `HashMap`, and prints results sorted descending by count.
+
+---
+
+## Week 4: Programs Overview
+
+### Practice Problems (`Week-4/Practice-Problems/`) — Category C Problems
+1. **`TwoSum.java`**
+   - **Scenario:** *Shopkeeper Item Budget Matcher* – Uses nested loops to check every pair `(i, j)` and returns the indices summing to `target`.
+   - **Key Method:** `int[] twoSum(int[] nums, int target)`
+2. **`BestTimeToBuyAndSellStock.java`**
+   - **Scenario:** *Trainee Investor Profit Finder* – Single-pass traversal tracking running minimum price and maximum achievable profit.
+   - **Key Method:** `int maxProfit(int[] prices)`
+3. **`ContainsDuplicate.java`**
+   - **Scenario:** *Exam Seating Roll Number Duplicate Verifier* – Pairwise nested loop comparison with early exit upon finding any duplicate.
+   - **Key Method:** `boolean containsDuplicate(int[] nums)`
+4. **`MergeTwoSortedArrays.java`**
+   - **Scenario:** *Class Section Sorted Exam Scores Merger* – Two-pointer while-loop merge combining two sorted arrays in non-decreasing order.
+   - **Key Method:** `int[] mergeSortedArrays(int[] arr1, int[] arr2)`
+5. **`RotateArray.java`**
+   - **Scenario:** *Playlist Queue Rotation* – Right rotation by `k` positions using modulo wraparound indexing `(i + k) % n`.
+   - **Key Method:** `int[] rotateArray(int[] nums, int k)`
 
 ---
 
 ## How to Compile & Run
 
-### Week 1 Practice Problems:
+### Week 4 Practice Problems:
 ```bash
-cd Week-1/Practice-Problems
+cd Week-4/Practice-Problems
 javac *.java
 
-java RockPaperScissors
-java PalindromeChecker
-java BMICalculator
-java FirstNonRepeatingCharacter
-java ReverseCustomerName
-```
-
-### Week 1 Assignment Problems:
-```bash
-cd Week-1/Assignment-Problems
-javac *.java
-
-java ExamHallSeatDuplicationChecker
-java TypingSpeedTestAccuracyChecker
-java TrafficSignalStreakAnalyzer
-java WarehouseInventoryBalancer
-java MovieReviewWordLengthProfiler
-```
-
-### Week 2 Practice Problems:
-```bash
-cd Week-2/Practice-Problems
-javac *.java
-
-java VowelAndConsonantCounter
-java CSVStudentRecordParser
-java FileExtensionValidator
-java MaskedPhoneNumberFormatter
-java BankTransactionReferenceValidator
-```
-
-### Week 2 Assignment Problems:
-```bash
-cd Week-2/Assignment-Problems
-javac *.java
-
-java AtmPinLengthValidator
-java WordReversalEncoder
-java ProductInventoryCsvParser
-java LibraryIsbnValidator
-java StopWordFilteredWordFrequencyReport
-```
-
----
-
-## Adding Future Weeks (Week-10 and Beyond)
-
-To extend the repository with additional weeks:
-```bash
-mkdir -p Week-10/Practice-Problems Week-10/Assignment-Problems
-touch Week-10/Practice-Problems/.gitkeep Week-10/Assignment-Problems/.gitkeep
+java TwoSum
+java BestTimeToBuyAndSellStock
+java ContainsDuplicate
+java MergeTwoSortedArrays
+java RotateArray
 ```
 
 ---
@@ -206,15 +147,9 @@ touch Week-10/Practice-Problems/.gitkeep Week-10/Assignment-Problems/.gitkeep
 
 When you are ready to publish:
 
-1. **Create an empty repository on GitHub**:
-   - Go to [GitHub New Repository](https://github.com/new).
-   - Name it `STEP-SEM-3`.
-   - Do **not** initialize with a README, `.gitignore`, or license.
-
-2. **Run in terminal inside `C:\Users\manikanta\Documents\STEP-SEM-3`**:
-   ```bash
-   git add .
-   git commit -m "Add Week 2 assignment problems and update documentation"
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/STEP-SEM-3.git
-   git push -u origin main
-   ```
+```powershell
+cd "C:\Users\manikanta\Documents\STEP-SEM-3"
+git add .
+git commit -m "Add Week 4 practice problems and update documentation"
+git push origin main
+```
