@@ -25,7 +25,11 @@ STEP-SEM-3/
 │       └── RockPaperScissors.java
 ├── Week-2/
 │   ├── Assignment-Problems/
-│   │   └── .gitkeep
+│   │   ├── AtmPinLengthValidator.java
+│   │   ├── LibraryIsbnValidator.java
+│   │   ├── ProductInventoryCsvParser.java
+│   │   ├── StopWordFilteredWordFrequencyReport.java
+│   │   └── WordReversalEncoder.java
 │   └── Practice-Problems/
 │       ├── BankTransactionReferenceValidator.java
 │       ├── CSVStudentRecordParser.java
@@ -100,7 +104,7 @@ STEP-SEM-3/
 
 ## Week 2: Programs Overview
 
-### Practice Problems (`Week-2/Practice-Problems/`)
+### A. Practice Problems (`Week-2/Practice-Problems/`)
 1. **`VowelAndConsonantCounter.java`**
    - **Scenario:** *Library Orientation Kiosk* – Loops through text using `charAt()`, counts vowels (case-insensitive) and consonants separately, and ignores spaces.
    - **Key Method:** `countVowelsAndConsonants(String text)`
@@ -116,6 +120,23 @@ STEP-SEM-3/
 5. **`BankTransactionReferenceValidator.java`**
    - **Scenario:** *Fintech Onboarding Module* – Normalizes codes (trim + first 3 letters uppercased), validates 14 characters (3 letters + 11 digits via `Character.isLetter()`/`isDigit()`, no regex), and constructs formatted display line `"[BANKCODE] DATE: dd/MM/yy | SEQ: 12345"` using `StringBuilder`.
    - **Key Methods:** `normalizeReference(String raw)`, `validateAndFormat(String reference)`
+
+### B. Assignment Problems (`Week-2/Assignment-Problems/`)
+1. **`AtmPinLengthValidator.java`**
+   - **Scenario:** *ATM Customer Input Pre-check* – Validates that an entered PIN string is exactly 4 characters using `length()` and a single `if/else` check (no loops).
+   - **Key Method:** `checkPinLength(String pin)`
+2. **`WordReversalEncoder.java`**
+   - **Scenario:** *Coding Club "Mirror Text" Mini-Game* – Splits sentences by space, reverses each word individually using a loop and `StringBuilder`, and joins back preserving word order.
+   - **Key Method:** `reverseEachWord(String sentence)`
+3. **`ProductInventoryCsvParser.java`**
+   - **Scenario:** *Warehouse Inventory Updates Parser* – Splits CSV lines into fields (`"ProductName,SKU,Quantity"`), validates 3 fields, and prints formatted records.
+   - **Key Method:** `parseInventoryRecord(String csvLine)`
+4. **`LibraryIsbnValidator.java`**
+   - **Scenario:** *Library Book-Intake Scanner* – Normalizes codes (trim + first 3 letters uppercased), validates 13 characters (3 letters + 10 digits via loop - no regex), and builds display line `"[PUBCODE] YEAR: 20XX | CATALOG: 123456"` with `StringBuilder`.
+   - **Key Methods:** `normalizeCode(String raw)`, `validateAndFormat(String code)`
+5. **`StopWordFilteredWordFrequencyReport.java`**
+   - **Scenario:** *T&P Team Feedback Analysis* – Lowercases text, strips punctuation with `replace()`, splits by whitespace, filters stop words (`"the"`, `"was"`, `"and"`, `"a"`, `"is"`, `"of"`, `"in"`), counts frequencies with a `HashMap`, and prints results sorted descending by count.
+   - **Key Method:** `printFilteredWordFrequency(String feedback)`
 
 ---
 
@@ -157,6 +178,18 @@ java MaskedPhoneNumberFormatter
 java BankTransactionReferenceValidator
 ```
 
+### Week 2 Assignment Problems:
+```bash
+cd Week-2/Assignment-Problems
+javac *.java
+
+java AtmPinLengthValidator
+java WordReversalEncoder
+java ProductInventoryCsvParser
+java LibraryIsbnValidator
+java StopWordFilteredWordFrequencyReport
+```
+
 ---
 
 ## Adding Future Weeks (Week-10 and Beyond)
@@ -181,7 +214,7 @@ When you are ready to publish:
 2. **Run in terminal inside `C:\Users\manikanta\Documents\STEP-SEM-3`**:
    ```bash
    git add .
-   git commit -m "Add Week 2 practice problems and update documentation"
+   git commit -m "Add Week 2 assignment problems and update documentation"
    git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/STEP-SEM-3.git
    git push -u origin main
    ```
