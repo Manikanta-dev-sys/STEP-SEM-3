@@ -41,7 +41,11 @@ STEP-SEM-3/
 │   └── Practice-Problems/
 ├── Week-4/
 │   ├── Assignment-Problems/
-│   │   └── .gitkeep
+│   │   ├── FindMinimumInRotatedSortedArray.java
+│   │   ├── MaximumSubarray.java
+│   │   ├── ProductOfArrayExceptSelf.java
+│   │   ├── SubarraySumEqualsK.java
+│   │   └── ThreeSum.java
 │   └── Practice-Problems/
 │       ├── BestTimeToBuyAndSellStock.java
 │       ├── ContainsDuplicate.java
@@ -108,22 +112,29 @@ STEP-SEM-3/
 
 ## Week 4: Programs Overview
 
-### Practice Problems (`Week-4/Practice-Problems/`) — Category C Problems
-1. **`TwoSum.java`**
-   - **Scenario:** *Shopkeeper Item Budget Matcher* – Uses nested loops to check every pair `(i, j)` and returns the indices summing to `target`.
-   - **Key Method:** `int[] twoSum(int[] nums, int target)`
-2. **`BestTimeToBuyAndSellStock.java`**
-   - **Scenario:** *Trainee Investor Profit Finder* – Single-pass traversal tracking running minimum price and maximum achievable profit.
-   - **Key Method:** `int maxProfit(int[] prices)`
-3. **`ContainsDuplicate.java`**
-   - **Scenario:** *Exam Seating Roll Number Duplicate Verifier* – Pairwise nested loop comparison with early exit upon finding any duplicate.
-   - **Key Method:** `boolean containsDuplicate(int[] nums)`
-4. **`MergeTwoSortedArrays.java`**
-   - **Scenario:** *Class Section Sorted Exam Scores Merger* – Two-pointer while-loop merge combining two sorted arrays in non-decreasing order.
-   - **Key Method:** `int[] mergeSortedArrays(int[] arr1, int[] arr2)`
-5. **`RotateArray.java`**
-   - **Scenario:** *Playlist Queue Rotation* – Right rotation by `k` positions using modulo wraparound indexing `(i + k) % n`.
-   - **Key Method:** `int[] rotateArray(int[] nums, int k)`
+### A. Practice Problems (`Week-4/Practice-Problems/`) — Category C Problems
+1. **`TwoSum.java`** – Uses nested loops to check every pair `(i, j)` and returns the indices summing to `target`.
+2. **`BestTimeToBuyAndSellStock.java`** – Single-pass traversal tracking running minimum price and maximum achievable profit.
+3. **`ContainsDuplicate.java`** – Pairwise nested loop comparison with early exit upon finding any duplicate.
+4. **`MergeTwoSortedArrays.java`** – Two-pointer while-loop merge combining two sorted arrays in non-decreasing order.
+5. **`RotateArray.java`** – Right rotation by `k` positions using modulo wraparound indexing `(i + k) % n`.
+
+### B. Assignment Problems (`Week-4/Assignment-Problems/`) — Category C Problems
+1. **`ProductOfArrayExceptSelf.java`**
+   - **Scenario:** *Pricing Engine Combined Product Value* – Computes running product of all elements except current element in $O(n)$ time and $O(1)$ extra space using prefix and suffix passes without division.
+   - **Key Method:** `int[] productExceptSelf(int[] nums)`
+2. **`MaximumSubarray.java`**
+   - **Scenario:** *Stock Trading Best Consecutive Trading Days* – Implements Kadane's algorithm in $O(n)$ time and $O(1)$ space to find the contiguous subarray with the largest sum.
+   - **Key Method:** `int maxSubArray(int[] nums)`
+3. **`ThreeSum.java`**
+   - **Scenario:** *Budgeting Tool Transaction Triplet Canceller* – Sorts the array and uses inward two-pointer traversal in $O(n^2)$ time with duplicate avoidance to find all unique triplets summing to 0.
+   - **Key Method:** `int[][] threeSum(int[] nums)`
+4. **`SubarraySumEqualsK.java`**
+   - **Scenario:** *Hostel Attendance Net Change Analyzer* – Uses prefix sums combined with a hash map of prefix-sum frequencies in $O(n)$ time to count contiguous subarrays with sum equal to $k$.
+   - **Key Method:** `int subarraySum(int[] nums, int k)`
+5. **`FindMinimumInRotatedSortedArray.java`**
+   - **Scenario:** *Circular Duty Roster Earliest Join Date Finder* – Employs modified binary search in $O(\log n)$ time comparing mid to rightmost element to find the minimum value in a rotated sorted array.
+   - **Key Method:** `int findMin(int[] nums)`
 
 ---
 
@@ -141,6 +152,18 @@ java MergeTwoSortedArrays
 java RotateArray
 ```
 
+### Week 4 Assignment Problems:
+```bash
+cd Week-4/Assignment-Problems
+javac *.java
+
+java ProductOfArrayExceptSelf
+java MaximumSubarray
+java ThreeSum
+java SubarraySumEqualsK
+java FindMinimumInRotatedSortedArray
+```
+
 ---
 
 ## Connecting to Your GitHub Repository
@@ -150,6 +173,6 @@ When you are ready to publish:
 ```powershell
 cd "C:\Users\manikanta\Documents\STEP-SEM-3"
 git add .
-git commit -m "Add Week 4 practice problems and update documentation"
+git commit -m "Add Week 4 assignment problems and update documentation"
 git push origin main
 ```
